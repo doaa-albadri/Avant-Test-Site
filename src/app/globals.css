@@ -2,32 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: local("Gilroy-Bold"),
+    url(../../public/fonts/gilroy/Gilroy-Bold.ttf) format("truetype");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: local("Gilroy-Medium"),
+    url(../../public/fonts/gilroy/Gilroy-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Gilroy-Light";
+  src: local("Gilroy-Light"),
+    url(../../public/fonts/gilroy/Gilroy-Light.ttf) format("truetype");
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  font-family: "Gilroy", sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.navbar {
+  background-color: #010521;
+  color: #ffffff;
+  font-family: "Gilroy-Light", sans-serif;
+  background-image: url("../../public/images/header_bg.png");
+  background-repeat: no-repeat;
+  background-position: 30% 0%;
+  height: 140px;
+}
+
+.welcome-section-wrapper {
+  height: 900px;
+  overflow: hidden;
+  perspective: 10px;
+  background-color: #010521;
+}
+
+.welcome-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 700px;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.fg {
+  position: absolute;
+  object-fit: cover;
+  z-index: -1;
+  right: 0 !important;
+}
+
+.welcome-text {
+  margin-top: -5%;
+}
+
+.welcome-h1 {
+  color: #ffffff;
+  font-size: 70px;
+  line-height: 90px;
+  z-index: 1;
+  font-family: "Gilroy-Bold", sans-serif;
+}
+
+.welcome-h6 {
+  color: #ffffff;
+  font-family: "Gilroy-Light", sans-serif;
 }
