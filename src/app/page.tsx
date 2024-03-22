@@ -1,11 +1,9 @@
 "use client"
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
-
-import logo from '../../public/images/logo.png'
-import header_bg from '../../public/images/header_bg.png'
 import header_fg from '../../public/images/header_fg.png'
-import { useState, useEffect } from "react";
 import BorderButton from "./components/borderButton";
 
 
@@ -26,7 +24,6 @@ export default function Home() {
   return (
     <main>
 
-
       <div className="welcome-section-wrapper">
 
         <div className="welcome-section">
@@ -42,8 +39,37 @@ export default function Home() {
 
         </div>
       </div>
-
       <div className="text">
+        If the navbar is not sticking to the top of the screen even after adjusting the z-index and removing potential conflicting styles, there might be other factors affecting its behavior. Here are some additional steps you can take to troubleshoot and ensure the navbar sticks properly:
+
+        Check for Conflicting Styles: Ensure there are no conflicting styles from other parts of your code or external libraries that might interfere with the navbar's sticky behavior.
+
+        Inspect Browser Dev Tools: Use your browser's developer tools to inspect the navbar element and see if there are any unexpected styles being applied that could affect its positioning.
+
+        Test in Different Browsers: Test the page in different browsers to see if the issue persists across different environments. Sometimes browser-specific quirks can affect the behavior of sticky elements.
+
+        Simplify the Layout: Temporarily remove any unnecessary elements or styles from your page to simplify the layout. This can help isolate the issue and identify any specific elements or styles causing the problem.
+
+        Check JavaScript Errors: If you're using JavaScript on your page, ensure there are no errors in the console that could be preventing the sticky behavior from working correctly.
+
+        Consider Using a Framework or Library: If you're still encountering issues, consider using a front-end framework or library like Bootstrap or Tailwind CSS, which often provide built-in components for sticky navigation bars that are well-tested and reliable across different browsers.
+
+        By following these steps and carefully inspecting your code, you should be able to identify and resolve the issue preventing your navbar from sticking to the top of the screen. If you're still having trouble, providing more details or code snippets could help in diagnosing the problem further.
+        If the navbar is not sticking to the top of the screen even after adjusting the z-index and removing potential conflicting styles, there might be other factors affecting its behavior. Here are some additional steps you can take to troubleshoot and ensure the navbar sticks properly:
+
+        Check for Conflicting Styles: Ensure there are no conflicting styles from other parts of your code or external libraries that might interfere with the navbar's sticky behavior.
+
+        Inspect Browser Dev Tools: Use your browser's developer tools to inspect the navbar element and see if there are any unexpected styles being applied that could affect its positioning.
+
+        Test in Different Browsers: Test the page in different browsers to see if the issue persists across different environments. Sometimes browser-specific quirks can affect the behavior of sticky elements.
+
+        Simplify the Layout: Temporarily remove any unnecessary elements or styles from your page to simplify the layout. This can help isolate the issue and identify any specific elements or styles causing the problem.
+
+        Check JavaScript Errors: If you're using JavaScript on your page, ensure there are no errors in the console that could be preventing the sticky behavior from working correctly.
+
+        Consider Using a Framework or Library: If you're still encountering issues, consider using a front-end framework or library like Bootstrap or Tailwind CSS, which often provide built-in components for sticky navigation bars that are well-tested and reliable across different browsers.
+
+        By following these steps and carefully inspecting your code, you should be able to identify and resolve the issue preventing your navbar from sticking to the top of the screen. If you're still having trouble, providing more details or code snippets could help in diagnosing the problem further.
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo eaque
         accusantium facilis quam quasi iste non consectetur sed obcaecati illum
         eveniet corporis magnam molestiae dignissimos earum fugiat dolorem
@@ -79,9 +105,6 @@ export default function Home() {
         Incidunt ratione beatae accusamus repellat rerum id, sit doloribus nobis
         quaerat excepturi.
       </div>
-
-
-
     </main>
   );
 }
