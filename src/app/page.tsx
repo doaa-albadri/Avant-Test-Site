@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import header_fg from '../../public/images/header_fg.png'
 import BorderButton from "./components/borderButton";
+import MobileMenu from "./components/mobileMenu";
 
 
 export default function Home() {
@@ -23,9 +24,7 @@ export default function Home() {
   }, []);
   return (
     <main>
-
       <div className="welcome-section-wrapper">
-
         <div className="welcome-section">
           <Image
             style={{ transform: `translateY(${scrollY * 0.5}px)` }}

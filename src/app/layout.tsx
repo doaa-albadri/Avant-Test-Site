@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Image from "next/image";
-
-import Button from "./components/button";
 
 
-import logo from '../../public/images/logo.png'
+
 import Navbar from "./components/navbar";
+import MobileMenu from "./components/mobileMenu";
 
 
 export const metadata: Metadata = {
@@ -26,6 +24,7 @@ export default function RootLayout({
 
       <body>
         <Navbar />
+        <MobileMenu />
         {children}
       </body>
     </html>

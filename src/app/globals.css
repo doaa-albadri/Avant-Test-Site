@@ -90,14 +90,40 @@ body {
   font-family: "Gilroy-Light", sans-serif;
 }
 
+.mobile-header {
+  background-color: #010521;
+  background-image: url("../../public/images/header_bg.png");
+  background-repeat: no-repeat;
+  background-position: 70% 0%;
+  background-size: 20%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.mobile-menu {
+  position: relative;
+  background-color: transparent;
+  color: #2c2c2c;
+}
+.menu-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0px 10px 34px 0px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  z-index: 999;
+}
+
 /* tablet */
 @media only screen and (max-width: 830px) {
   .welcome-section-wrapper {
     height: 491px;
-    background-image: url("../../public/images/header_bg.png");
+    /* background-image: url("../../public/images/header_bg.png");
     background-repeat: no-repeat;
     background-position: 75% 0%;
-    background-size: 20%;
+    background-size: 20%; */
   }
   .fg {
     width: 50%;
@@ -122,10 +148,10 @@ body {
     margin-bottom: -60px;
   }
   .welcome-section-wrapper {
-    background-image: url("../../public/images/header_bg.png");
+    /* background-image: url("../../public/images/header_bg.png");
     background-repeat: no-repeat;
     background-position: 75% 0%;
-    background-size: 30%;
+    background-size: 30%; */
   }
   .welcome-text {
     display: flex;
