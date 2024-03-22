@@ -31,8 +31,9 @@ export default function Home() {
             style={{ transform: `translateY(${scrollY * 0.5}px)` }}
             src={header_fg} alt="fg-image" className="fg" />
 
-          <div className="welcome-text pl-20">
-            <h1 className="welcome-h1 mb-2">Welcome<br /> To The Second <br /> Level of the process</h1>
+          <div className="welcome-text px-3 sm:pl-20">
+            <h1 className="welcome-h1 mb-2 hidden md:block">Welcome<br /> To The Second <br /> Level of the process</h1>
+            <h1 className="welcome-h1 mb-2 md:hidden">Welcome To <br /> The Second Level <br />  of the process</h1>
             <h6 className="welcome-h6 mb-7">Congratulations on Passing The Screening Interview</h6>
             <BorderButton label="Get Started" />
           </div>
