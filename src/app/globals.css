@@ -25,6 +25,7 @@ body {
   font-family: "Gilroy", sans-serif;
 }
 
+/* navbar styles */
 .navbar {
   background-color: #010521;
   color: #ffffff;
@@ -50,6 +51,35 @@ body {
   box-shadow: 0px 10px 34px 0px rgba(0, 0, 0, 0.5);
 }
 
+/* mobile nav */
+.mobile-header {
+  display: none;
+  background-color: #010521;
+  background-image: url("../../public/images/header_bg.png");
+  background-repeat: no-repeat;
+  background-position: 70% 0%;
+  background-size: 20%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.mobile-menu {
+  position: relative;
+  background-color: transparent;
+  color: #2c2c2c;
+}
+.menu-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0px 10px 34px 0px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  z-index: 999;
+}
+
+/* welcome section */
 .welcome-section-wrapper {
   height: 900px;
   overflow: hidden;
@@ -90,31 +120,96 @@ body {
   font-family: "Gilroy-Light", sans-serif;
 }
 
-.mobile-header {
-  display: none;
-  background-color: #010521;
-  background-image: url("../../public/images/header_bg.png");
-  background-repeat: no-repeat;
-  background-position: 70% 0%;
-  background-size: 20%;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+/* story-section */
+.story-section {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 8rem;
 }
 
-.mobile-menu {
-  position: relative;
-  background-color: transparent;
+.story-imgs {
+  margin-top: -30rem;
+}
+
+.big-border {
+  border: 2px solid #010521;
+  border-radius: 2px;
+  width: 492px;
+  height: 659px;
+  position: absolute;
+  margin-top: -40px;
+  margin-left: -40px;
+}
+
+.small-border {
+  border: 2px solid #191afe;
+  border-radius: 2px;
+  width: 191px;
+  height: 239px;
+  position: absolute;
+  margin-top: 455px;
+  margin-left: 340px;
+}
+
+.desk-img {
+  position: absolute;
+}
+
+.story-text {
+  margin-top: 10rem;
+}
+
+.title {
+  font-size: 50px;
+  line-height: 66px;
+  font-family: "Gilroy-Bold", sans-serif;
   color: #2c2c2c;
 }
-.menu-items {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  box-shadow: 0px 10px 34px 0px rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  z-index: 999;
+
+.story-h6 {
+  font-size: 14px;
+  color: #2c2c2c;
+  font-family: "Gilroy-Medium", sans-serif;
+  line-height: 24px;
+}
+
+.spacer {
+  height: 12rem;
+}
+
+.mobile-desk-img {
+  display: none;
+}
+
+.story-imgs-fade {
+  scale: 0.8;
+  opacity: 0;
+  animation: scale-up-fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: contain 100px 400px;
+}
+
+.text-fade-in {
+  opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: entry;
+}
+
+@keyframes scale-up-fade-in {
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
 }
 
 /* tablet */
@@ -124,10 +219,6 @@ body {
   }
   .welcome-section-wrapper {
     height: 491px;
-    /* background-image: url("../../public/images/header_bg.png");
-    background-repeat: no-repeat;
-    background-position: 75% 0%;
-    background-size: 20%; */
   }
   .fg {
     width: 50%;
@@ -142,6 +233,21 @@ body {
   .navbar {
     display: none;
   }
+  .story-section {
+    flex-direction: column-reverse;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    row-gap: 2rem;
+  }
+  .story-text {
+    margin-bottom: 33rem;
+  }
+  .story-imgs {
+    width: 65%;
+  }
+  .spacer {
+    display: none;
+  }
 }
 
 /* mobile */
@@ -152,10 +258,6 @@ body {
     margin-bottom: -60px;
   }
   .welcome-section-wrapper {
-    /* background-image: url("../../public/images/header_bg.png");
-    background-repeat: no-repeat;
-    background-position: 75% 0%;
-    background-size: 30%; */
   }
   .welcome-text {
     display: flex;
@@ -168,5 +270,28 @@ body {
   }
   .welcome-h6 {
     text-align: center;
+  }
+
+  .story-imgs {
+    display: none;
+  }
+  .story-text {
+    width: 100%;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .story-h2 {
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .story-h6 {
+    text-align: center;
+  }
+
+  .mobile-desk-img {
+    display: block;
   }
 }
