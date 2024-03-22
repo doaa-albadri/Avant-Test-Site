@@ -189,7 +189,7 @@ body {
   opacity: 0;
   animation: scale-up-fade-in linear forwards;
   animation-timeline: view();
-  animation-range: contain 100px 400px;
+  animation-range: contain;
 }
 
 .text-fade-in {

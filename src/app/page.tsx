@@ -50,7 +50,7 @@ export default function Home() {
           <div className="small-border"></div>
         </div>
 
-        <Image className="mobile-desk-img" src={desk} alt="desk" />
+        <Image className="mobile-desk-img text-fade-in" src={desk} alt="desk" />
 
         <div className="story-text w-1/2 text-fade-in">
           <h2 className="story-h2 title mb-8">
