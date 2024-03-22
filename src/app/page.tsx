@@ -8,9 +8,43 @@ import BorderButton from "./components/borderButton";
 import header_fg from '../../public/images/header_fg.png'
 import desk from '../../public/images/desk.png'
 import Button from "./components/button";
+import PlainCard from "./components/plainCard";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
+
+  const cards = [
+    {
+      cardBorder: "",
+      title: "The First Card",
+      text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      cardBg: "bg-primary",
+      textColor: "text-white",
+      btnBg: "bg-white",
+      btnTextColor: "text-textDark",
+      label: "Learn More"
+    },
+    {
+      cardBorder: "border-gradient",
+      title: "Yet another one",
+      text: "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',",
+      cardBg: "bg-white",
+      textColor: "text-textDark",
+      btnBg: "bg-primary",
+      btnTextColor: "text-white",
+      label: "Learn More"
+    },
+    {
+      cardBorder: "border-gradient",
+      title: "We really like these",
+      text: "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',",
+      cardBg: "bg-white",
+      textColor: "text-textDark",
+      btnBg: "bg-primary",
+      btnTextColor: "text-white",
+      label: "Learn More"
+    }
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,7 +77,7 @@ export default function Home() {
 
       <div className="spacer" />
 
-      <section className="story-section px-20">
+      <section className="story-section px-20 mb-10">
         <div className="story-imgs w-1/2 story-imgs-fade relavent">
           <Image className="desk-img" src={desk} alt="desk" />
           <div className="big-border"></div>
@@ -65,6 +99,34 @@ export default function Home() {
 
           <Button textColor="text-white" label="Get Started" bgColor="bg-primary" />
         </div>
+      </section>
+
+
+      <section className="cards-section mt-20 pb-20 mb-20 cards-slide-right">
+        <div className="spacer mb-20" />
+
+        <h2 className="title text-center mb-20">
+          Cards are an essential<br />Element of a clear User Interface
+        </h2>
+        <div className="flex flex-row gap-5 px-5 md:px-20 ">
+          {cards.map((card, index) => {
+            return (
+              <div key={index}>
+                <PlainCard title={card.title}
+                  text={card.text}
+                  cardBg={card.cardBg}
+                  textColor={card.textColor}
+                  btnBg={card.btnBg}
+                  btnTextColor={card.btnTextColor}
+                  label={card.label}
+                  cardBorder={card.cardBorder}
+                />
+              </div>
+
+            )
+          })}
+        </div>
+
       </section>
     </main>
   );
