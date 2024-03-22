@@ -102,13 +102,13 @@ export default function Home() {
       </section>
 
 
-      <section className="cards-section mt-20 pb-20 mb-20 cards-slide-right">
+      <section className="mt-20 pb-20 mb-20 cards-slide-right">
         <div className="spacer mb-20" />
 
         <h2 className="title text-center mb-20">
           Cards are an essential<br />Element of a clear User Interface
         </h2>
-        <div className="flex flex-row gap-5 px-5 md:px-20 ">
+        <div className="cards-div flex flex-row gap-5 px-5 md:px-20 ">
           {cards.map((card, index) => {
             return (
               <div key={index}>

@@ -3,6 +3,12 @@
   padding: 2rem;
   width: 390px;
   height: 419px;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.card-container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
 
 .card-container > h3 {

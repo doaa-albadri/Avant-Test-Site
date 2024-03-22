@@ -231,8 +231,19 @@ body {
   }
 }
 
+.cards-div {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.cards-div::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
 /* tablet */
 @media only screen and (max-width: 830px) {
+  .cards-div {
+    overflow-x: scroll;
+  }
   .title {
     font-size: 35px;
     line-height: 45px;
