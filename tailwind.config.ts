@@ -8,10 +8,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        "gilroy-bold": ["Gilroy-Bold", "sans-serif"],
+        "gilroy-medium": ["Gilroy-Medium", "sans-serif"],
+        "gilroy-light": ["Gilroy-Light", "sans-serif"],
+      },
+      colors: {
+        primary: "#191AFE",
+        secondary: "#010521",
       },
     },
   },
