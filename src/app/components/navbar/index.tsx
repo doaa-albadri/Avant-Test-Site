@@ -50,11 +50,14 @@ export default function Navbar() {
         <div style={{ position: 'sticky', top: '0', zIndex: '1' }} className="navbar pt-5">
             <nav
                 className="flex items-center justify-between px-20">
-                <div className="flex items-center gap-1 ">
-                    <Image id='logo' src={logo} alt="logo" />
-                    <Image style={{ display: 'none' }} id='colored_logo' src={colored_logo} alt="logo" />
-                    <h5>Nexus Creative</h5>
-                </div>
+                <a href='#home'>
+                    <div className="flex items-center gap-1 ">
+                        <Image id='logo' src={logo} alt="logo" />
+                        <Image style={{ display: 'none' }} id='colored_logo' src={colored_logo} alt="logo" />
+                        <h5>Nexus Creative</h5>
+                    </div>
+                </a>
+
 
                 <div className="flex gap-10">
                     <ul className="flex items-center gap-10">
@@ -72,7 +75,7 @@ export default function Navbar() {
                         </li>
                     </ul>
                     <Button id="show-white-bg" bgColor="bg-white" textColor="text-primary" label="Inestor Sign In" />
-                    <Button id="show-primary-bg" bgColor="bg-primary" textColor="text-white" label="Inestor Sign In" />
+                    <Button display='hidden' id="show-primary-bg" bgColor="bg-primary" textColor="text-white" label="Inestor Sign In" />
 
                 </div>
             </nav>

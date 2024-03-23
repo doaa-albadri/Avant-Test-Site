@@ -76,8 +76,12 @@ const MobileMenu = () => {
                     </div>
                 )}
             </div>
-            <Image id='mobile-logo' src={logo} alt='menu-button' className='mr-5' />
-            <Image style={{ display: 'none' }} id='mobile-colored-logo' src={colored_logo} alt='menu-button' className='mr-5' />
+
+            <a href='#home'>
+                <Image id='mobile-logo' src={logo} alt='menu-button' className='mr-5' />
+                <Image style={{ display: 'none' }} id='mobile-colored-logo' src={colored_logo} alt='menu-button' className='mr-5' />
+            </a>
+
 
         </div>
 

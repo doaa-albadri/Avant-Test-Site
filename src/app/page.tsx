@@ -101,7 +101,7 @@ export default function Home() {
   }, []);
   return (
     <main>
-      <section className="welcome-section-wrapper">
+      <section id="home" className="welcome-section-wrapper">
         <div className="welcome-section">
           <Image
             style={{ transform: `translateY(${scrollY * 0.5}px)` }}
@@ -119,7 +119,7 @@ export default function Home() {
 
       <div style={{ height: '12rem' }} className="spacer" />
 
-      <section className="story-section px-20 mb-10">
+      <section id="ourstory" className="story-section px-20 mb-10">
         <div className="story-imgs w-1/2 story-imgs-fade relavent">
           <Image className="desk-img" src={desk} alt="desk" />
           <div className="big-border"></div>
@@ -173,7 +173,7 @@ export default function Home() {
 
       <div style={{ height: '10rem' }} className="spacer" />
 
-      <section className="startup-section bg-primary pt-10 pb-0 px-5 lg:px-20">
+      <section id="services" className="startup-section bg-primary pt-10 pb-0 px-5 lg:px-20">
         <div className="slide-left">
           <h2 className="title text-white">Get started on your startup<br />journey with the right investments</h2>
 
@@ -245,7 +245,7 @@ export default function Home() {
       <div style={{ height: '4rem' }} className="spacer" />
 
 
-      <section className="investors-section px-0 md:px-20 mt-5 md:mt-20 slide-right">
+      <section id="investors" className="investors-section px-0 md:px-20 mt-5 md:mt-20 slide-right">
         <div className="grid lg:grid-cols-2 mb-10 text-fade-in">
           <h2 className="title text-textDark text-center lg:text-left">
             What our Investors <br /> are saying
@@ -345,7 +345,7 @@ export default function Home() {
 
       <div style={{ height: '4rem' }} className="spacer" />
 
-      <section className="contact-section mt-20 lg:mt-0 px-5 lg:px-20">
+      <section id="contact" className="contact-section mt-20 lg:mt-0 px-5 lg:px-20">
         <div className="bg-secondaryLight py-10 flex flex-col gap-5 items-center justify-center">
           <h3 className="contact-title text-white text-center mb-5">
             Let’s Get in Touch

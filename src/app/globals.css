@@ -25,6 +25,10 @@ body {
   font-family: "Gilroy", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* hide scroll bar on overflow */
 .hide-scroll {
   -ms-overflow-style: none; /* Internet Explorer 10+ */
