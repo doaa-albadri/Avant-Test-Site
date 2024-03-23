@@ -54,6 +54,15 @@ export default function Home() {
     { title: 'Increase Value for Startup', text: 'Abusus enim multitudine hominum quam tran quillis in rebus diutius rexit, ex agrestibus habi itudine hominum' }
   ]
 
+  const stats = [
+    '10K',
+    '5K',
+    '10K',
+    '6K',
+
+  ]
+
+
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -156,6 +165,21 @@ export default function Home() {
             })}
           </div>
         </div>
+
+      </section>
+
+      <div style={{ height: '7rem' }} className="spacer" />
+
+      <section className="stats-section text-fade-in flex justify-evenly flex-wrap mt-20 gap-5 lg:gap-20">
+
+        {stats.map((item, index) => {
+          return (
+            <div className="stat-item" key={index}>
+              <h4 className="text-textDark">{item}</h4>
+              <span className="text-textDark">Launched Startups <br />Investment</span>
+            </div>
+          )
+        })}
 
       </section>
 

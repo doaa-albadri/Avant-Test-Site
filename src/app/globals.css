@@ -227,6 +227,29 @@ body {
 
 .img-cards {
   margin-left: -18%;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.img-cards::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.stats-section h4 {
+  font-size: 50px;
+  font-family: "Gilroy-Bold", sans-serif;
+}
+
+.stats-section span {
+  font-size: 14px;
+  font-family: "Gilroy-Light", sans-serif;
+}
+
+.stat-item {
+  transition: ease-in 0.5s;
+}
+.stat-item:hover {
+  scale: 1.1;
 }
 
 @keyframes scale-up-fade-in {
