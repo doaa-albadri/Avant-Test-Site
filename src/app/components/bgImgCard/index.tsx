@@ -2,20 +2,19 @@ import React, { HTMLAttributes } from 'react'
 import './styles.css'
 import Button from '../button'
 
-interface PlainCardProps extends HTMLAttributes<HTMLDivElement> {
+interface BgImgCardProps extends HTMLAttributes<HTMLDivElement> {
     label: string;
     textColor: string;
     btnBg: string;
     cardBg: string;
-    cardBorder?: string;
     title: string;
     text: string;
     btnTextColor: string;
     bgImg?: string;
 }
-const PlainCard: React.FC<PlainCardProps> = ({ label, bgImg, btnTextColor, title, text, cardBg, btnBg, cardBorder, textColor, ...props }) => {
+const BgImgCard: React.FC<BgImgCardProps> = ({ label, bgImg, btnTextColor, title, text, cardBg, btnBg, textColor, ...props }) => {
     return (
-        <div className={`card-container flex flex-col items-start gap-5 ${cardBorder} ${bgImg} ${cardBg}`}>
+        <div className={`card-container flex flex-col items-start gap-5 ${cardBg} ${bgImg}`}>
             <h3 className={textColor}>{title}</h3>
             <h6 className={`${textColor} mb-10`}>{text}</h6>
             <Button bgColor={btnBg} textColor={btnTextColor} label={label} />
@@ -23,4 +22,4 @@ const PlainCard: React.FC<PlainCardProps> = ({ label, bgImg, btnTextColor, title
     )
 }
 
-export default PlainCard
+export default BgImgCard

@@ -18,6 +18,7 @@ import stars from '../../public/images/stars.png'
 import avatar from '../../public/images/avatar.png'
 import arrow_left from '../../public/images/arrow_left.png'
 import arrow_right from '../../public/images/arrow_right.png'
+import BgImgCard from "./components/bgImgCard";
 
 
 
@@ -191,7 +192,7 @@ export default function Home() {
 
       <div style={{ height: '7rem' }} className="spacer" />
 
-      <section className="stats-section text-fade-in flex justify-evenly flex-wrap mt-20 gap-5 lg:gap-20">
+      <section className="stats-section text-fade-in slide-right flex justify-evenly flex-wrap mt-20 gap-5 lg:gap-20">
 
         {stats.map((item, index) => {
           return (
@@ -294,6 +295,46 @@ export default function Home() {
 
 
           </div>
+        </div>
+      </section>
+
+      <div style={{ height: '4rem' }} className="spacer" />
+
+      <section>
+        <div>
+          <h2 className="title text-textDark text-center">
+            Join Our Network<br />of Forward-Thinking Investors
+          </h2>
+          <div className="flex gap-5 px-20 mt-20">
+            <div className="slide-right">
+              <BgImgCard title='Investor Startups'
+                text='Nexus Creative provides exclusive investment forindividuals and institutions looking to diversify their . By our network, you gain access to a curated selection of high-potential startups seeking funding.'
+                cardBg='bg-secondary'
+                textColor='text-white'
+                btnBg='bg-white'
+                btnTextColor='text-primary'
+                label='Learn More'
+                bgImg="object-nested-bg"
+              />
+
+            </div>
+
+            <div className="slide-left">
+              <BgImgCard title='Business Scaling'
+                text='Nexus Creative provides exclusive investment forindividuals and institutions looking to diversify their . By our network, you gain access to a curated selection of high-potential startups seeking funding.'
+                cardBg='bg-secondary'
+                textColor='text-white'
+                btnBg='bg-white'
+                btnTextColor='text-primary'
+                label='Learn More'
+                bgImg="object-bg"
+              />
+            </div>
+
+
+          </div>
+
+
         </div>
       </section>
     </main>

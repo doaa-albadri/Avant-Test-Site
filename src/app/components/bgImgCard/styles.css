@@ -1,8 +1,9 @@
 .card-container {
   font-family: "Gilroy-Medium", sans-serif;
   padding: 2rem;
-  width: 390px;
-  height: 419px;
+  /* width: 500px; */
+  width: 100%;
+  height: 354px;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 }
@@ -13,14 +14,14 @@
 
 .object-bg {
   background-image: url("../../../../public/images/object.png");
-  background-position: 19rem 1rem;
+  background-position: 19rem 3rem;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .object-nested-bg {
   background-image: url("../../../../public/images/object_nested.png");
-  background-position: 19rem 1rem;
+  background-position: 19rem 7rem;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -33,15 +34,7 @@
 .card-container > h6 {
   font-size: 14px;
   line-height: 24px;
-}
-
-.border-gradient {
-  background: linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 4px)
-      calc(100% - 4px) no-repeat,
-    linear-gradient(140deg, #010521 0%, rgba(72, 171, 224, 0) 75%);
-  border-radius: 2px;
-  padding: 2rem;
-  box-sizing: border-box;
+  width: 70%;
 }
 
 @media only screen and (max-width: 830px) {
