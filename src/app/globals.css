@@ -25,6 +25,15 @@ body {
   font-family: "Gilroy", sans-serif;
 }
 
+/* hide scroll bar on overflow */
+.hide-scroll {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.hide-scroll::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
 /* navbar styles */
 .navbar {
   background-color: #010521;
@@ -168,11 +177,24 @@ body {
   font-family: "Gilroy-Bold", sans-serif;
 }
 
-.story-h6 {
+.h6-text {
   font-size: 14px;
   color: #2c2c2c;
   font-family: "Gilroy-Medium", sans-serif;
   line-height: 24px;
+}
+
+.small-bold {
+  font-size: 14px;
+  color: #2c2c2c;
+  font-family: "Gilroy-Bold", sans-serif;
+  line-height: 24px;
+}
+
+.quote-text {
+  font-size: 43px;
+  line-height: 58px;
+  font-family: "Gilroy-Bold", sans-serif;
 }
 
 .mobile-desk-img {
@@ -184,7 +206,7 @@ body {
   opacity: 0;
   animation: scale-up-fade-in linear forwards;
   animation-timeline: view();
-  animation-range: contain;
+  animation-range: entry;
 }
 
 .text-fade-in {
@@ -194,17 +216,22 @@ body {
   animation-range: entry;
 }
 
-.cards-slide-right {
+.slide-right {
   opacity: 0;
   animation: slideRight;
-  animation-duration: 1s; /* Adjust duration as needed */
+  animation-duration: 5s;
   animation-fill-mode: forwards;
   animation-timeline: view();
-  /* opacity: 0;
-  animation-name: slideRight;
-  animation-timeline: scroll();
-  animation-duration: 1s;
-  animation-fill-mode: forwards; */
+  animation-range: entry;
+}
+
+.slide-left {
+  opacity: 0;
+  animation: slideLeft;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  animation-timeline: view();
+  animation-range: entry;
 }
 
 .startup-section {
@@ -215,24 +242,17 @@ body {
   background-attachment: fixed;
 }
 
-.startup-section h1 {
+.rotate-90 {
   font-size: 90px;
   color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #ffffff;
   transform: rotate(-90deg);
   margin-left: 1%;
-  /* margin-top: 14rem; */
 }
 
 .img-cards {
   margin-left: -18%;
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
-}
-
-.img-cards::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
 }
 
 .stats-section h4 {
@@ -276,16 +296,23 @@ body {
   }
 }
 
-.cards-div {
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
-}
-.cards-div::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* tablet */
 @media only screen and (max-width: 830px) {
+  .quote-text {
+    font-size: 22px;
+    line-height: 35px;
+  }
   .img-cards {
     margin-left: 0;
     display: flex;
@@ -378,7 +405,7 @@ body {
     line-height: 40px;
     text-align: center;
   }
-  .story-h6 {
+  .h6-text {
     text-align: center;
   }
   .mobile-desk-img {

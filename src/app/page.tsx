@@ -4,12 +4,23 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 import BorderButton from "./components/borderButton";
-
-import header_fg from '../../public/images/header_fg.png'
-import desk from '../../public/images/desk.png'
 import Button from "./components/button";
 import PlainCard from "./components/plainCard";
 import ImageCard from "./components/imgCard";
+
+import header_fg from '../../public/images/header_fg.png'
+import desk from '../../public/images/desk.png'
+import office from '../../public/images/office.png'
+import paypal from '../../public/images/paypal.png'
+import stripe from '../../public/images/stripe.png'
+import quotes from '../../public/images/quotes.png'
+import stars from '../../public/images/stars.png'
+import avatar from '../../public/images/avatar.png'
+import arrow_left from '../../public/images/arrow_left.png'
+import arrow_right from '../../public/images/arrow_right.png'
+
+
+
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -62,6 +73,15 @@ export default function Home() {
 
   ]
 
+  const payment_methods = [
+    stripe,
+    paypal,
+    stripe,
+    paypal,
+    stripe,
+    paypal,
+  ]
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -107,10 +127,10 @@ export default function Home() {
           <h2 className="story-h2 title mb-8 text-textDark">
             Join a team where innovation is an expectation
           </h2>
-          <h6 className="story-h6 mb-2">
+          <h6 className="h6-text mb-2">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type specimen book.
           </h6>
-          <h6 className="story-h6 mb-8">
+          <h6 className="h6-text mb-8">
             It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
           </h6>
 
@@ -119,13 +139,13 @@ export default function Home() {
       </section>
 
 
-      <section className="mt-20 pb-20 cards-slide-right">
+      <section className="mt-20 pb-20 slide-right">
         <div style={{ height: '15rem' }} className="spacer" />
 
         <h2 className="title text-textDark text-center mb-20">
           Cards are an essential<br />Element of a clear User Interface
         </h2>
-        <div className="cards-div flex flex-row gap-5 px-5 md:px-20 ">
+        <div className="cards-div hide-scroll flex flex-row gap-5 px-5 md:px-20 ">
           {cards.map((card, index) => {
             return (
               <div key={index}>
@@ -149,23 +169,24 @@ export default function Home() {
       <div style={{ height: '10rem' }} className="spacer" />
 
       <section className="startup-section bg-primary pt-10 pb-0 px-5 lg:px-20">
-        <h2 className="title text-white">Get started on your startup<br />journey with the right investments</h2>
+        <div className="slide-left">
+          <h2 className="title text-white">Get started on your startup<br />journey with the right investments</h2>
 
-        <div className="flex flex-row gap-0 mt-20">
-          <h1 className="hidden lg:block flex-none">
-            Nexus Creative
-          </h1>
-          <div className="img-cards grid grid-cols-2 gap-5 grow">
-            {imgCards.map((card, index) => {
-              return (
-                <div key={index}>
-                  <ImageCard title={card.title} text={card.text} />
-                </div>
-              )
-            })}
+          <div className="flex flex-row gap-0 mt-20">
+            <h1 className="rotate-90 hidden lg:block flex-none">
+              Nexus Creative
+            </h1>
+            <div className="img-cards hide-scroll grid grid-cols-2 gap-5 grow">
+              {imgCards.map((card, index) => {
+                return (
+                  <div key={index}>
+                    <ImageCard title={card.title} text={card.text} />
+                  </div>
+                )
+              })}
+            </div>
           </div>
         </div>
-
       </section>
 
       <div style={{ height: '7rem' }} className="spacer" />
@@ -183,6 +204,98 @@ export default function Home() {
 
       </section>
 
+      <div style={{ height: '7rem' }} className="spacer" />
+
+      <section className="discover-section pb-0 py-10 px-0 md:px-20">
+        <div className="grid lg:grid-cols-2 mb-5 text-fade-in">
+          <h2 className="title text-textDark text-center lg:text-left">
+            Discover the Rising<br />Stars We've Backed
+          </h2>
+
+          <div className="flex justify-center px-5 md:px-0 lg:justify-end">
+            <h6 className="text-textDark w-full lg:w-3/5 pt-4 text-center lg:text-left h6-text">
+              Abusus enim multitudine hominum quam tran quillis in rebus diutius rexiti ex agrestibus habi itudine homnum busus enim multitudine hominum quam tran quillisin re bus diutius rexit ex agres
+            </h6>
+          </div>
+        </div>
+
+        <div className="story-imgs-fade overflow-hidden mt-20 md:mt-0">
+          <Image src={office} alt="office" className="scale-150 md:scale-100" />
+        </div>
+      </section>
+
+      <section className="payment-section text-fade-in flex items-center justify-center flex-wrap gap-5 px-2 md:px-20 mt-5 gap-5 lg:gap-20">
+        {payment_methods.map((item, index) => {
+          return (
+            <div key={index}>
+              <Image src={item} alt="payment_method" className="opacity-50 hover:opacity-100" />
+            </div>
+          )
+        })}
+
+
+      </section>
+
+      <div style={{ height: '4rem' }} className="spacer" />
+
+
+      <section className="investors-section px-0 md:px-20 mt-20 slide-right">
+        <div className="grid lg:grid-cols-2 mb-10 text-fade-in">
+          <h2 className="title text-textDark text-center lg:text-left">
+            What our Investors <br /> are saying
+          </h2>
+
+          <div className="flex justify-center px-5 md:px-0 lg:justify-end">
+            <h6 className="text-textDark w-full lg:w-3/5 pt-4 text-center lg:text-left h6-text">
+              Abusus enim multitudine hominum quam tran quillis in rebus diutius rexiti ex agrestibus habi itudine homnum bus diutius rexit ex agres            </h6>
+          </div>
+        </div>
+
+        <div className="flex justify-between px-10 md:px-20">
+          <div className="flex flex-col md:flex-row items-start gap-0 md:gap-5">
+            <Image src={quotes} alt="qoutes" />
+            <div className="flex items-center gap-3">
+              <Image src={stars} alt="stars" className="mt-4" />
+              <h6 className="small-bold mt-5 block md:hidden">5.0</h6>
+            </div>
+            <h6 className="small-bold mt-4 hidden md:block">5.0</h6>
+          </div>
+
+          <div className="flex items-start md:items-center mt-4 md:mt-0 gap-5">
+            <div className="bg-primary p-3 rounded-full">
+              <Image src={arrow_left} alt="arrow-left" />
+            </div>
+
+            <div className="bg-secondary p-3 rounded-full">
+              <Image src={arrow_right} alt="arrow-right" />
+            </div>
+          </div>
+        </div>
+
+        <div className="text-textDark px-10 mb-10 md:px-20">
+          <h5 className="px-0 md:px-20  quote-text">
+            “With <span className="text-primary quote-text">Nexus Creative</span> the results are very satisfying. Wrapped with Hight quality and innovative design that makes a surge of visitors on my Start Up”
+          </h5>
+
+          <div className="flex justify-start items-center gap-5 px-10 md:px-20 mt-10">
+            <Image src={avatar} alt="avatar" />
+
+            <div className="flex flex-col gap-1">
+              <span className="small-bold">
+                Moss Smith
+              </span>
+
+              <span className="">
+                Business Manager
+              </span>
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
