@@ -420,7 +420,7 @@ export default function Home() {
 
       </footer>
 
-      <section className="mobile-footer bg-secondary flex flex-col gap-5 items-center px-5 pb-10">
+      <section className="mobile-footer bg-secondary flex md:hidden flex-col gap-5 items-center px-5 pb-10">
         <Image src={logo} alt="logo" />
         <Image src={nexus_creative} alt="website-name" />
         <span className="text-white extra-small-text">
