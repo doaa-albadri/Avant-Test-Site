@@ -1,0 +1,19 @@
+.img-card {
+  width: 390px;
+}
+
+.img-card h4 {
+  font-family: "Gilroy-Medium", sans-serif;
+  font-size: 32px;
+}
+
+.img-card h6 {
+  font-family: "Gilroy-Light", sans-serif;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 830px) {
+  .img-card {
+    width: 320px;
+  }
+}

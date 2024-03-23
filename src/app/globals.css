@@ -166,7 +166,6 @@ body {
   font-size: 50px;
   line-height: 66px;
   font-family: "Gilroy-Bold", sans-serif;
-  color: #2c2c2c;
 }
 
 .story-h6 {
@@ -174,10 +173,6 @@ body {
   color: #2c2c2c;
   font-family: "Gilroy-Medium", sans-serif;
   line-height: 24px;
-}
-
-.spacer {
-  height: 12rem;
 }
 
 .mobile-desk-img {
@@ -201,10 +196,37 @@ body {
 
 .cards-slide-right {
   opacity: 0;
+  animation: slideRight;
+  animation-duration: 1s; /* Adjust duration as needed */
+  animation-fill-mode: forwards;
+  animation-timeline: view();
+  /* opacity: 0;
   animation-name: slideRight;
   animation-timeline: scroll();
-  animation-duration: 5s;
-  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; */
+}
+
+.startup-section {
+  background-image: url("../../public/images/bg_group.png");
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.startup-section h1 {
+  font-size: 90px;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ffffff;
+  transform: rotate(-90deg);
+  margin-left: 1%;
+  /* margin-top: 14rem; */
+}
+
+.img-cards {
+  margin-left: -18%;
 }
 
 @keyframes scale-up-fade-in {
@@ -241,6 +263,11 @@ body {
 
 /* tablet */
 @media only screen and (max-width: 830px) {
+  .img-cards {
+    margin-left: 0;
+    display: flex;
+    overflow-x: scroll;
+  }
   .cards-div {
     overflow-x: scroll;
   }

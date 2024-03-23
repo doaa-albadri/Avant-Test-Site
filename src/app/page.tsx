@@ -9,6 +9,7 @@ import header_fg from '../../public/images/header_fg.png'
 import desk from '../../public/images/desk.png'
 import Button from "./components/button";
 import PlainCard from "./components/plainCard";
+import ImageCard from "./components/imgCard";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -46,6 +47,13 @@ export default function Home() {
     }
   ]
 
+  const imgCards = [
+    { title: 'Increase Value for Startup', text: 'Abusus enim multitudine hominum quam tran quillis in rebus diutius rexit, ex agrestibus habi itudine hominum' },
+    { title: 'Increase Value for Startup', text: 'Abusus enim multitudine hominum quam tran quillis in rebus diutius rexit, ex agrestibus habi itudine hominum' },
+    { title: 'Increase Value for Startup', text: 'Abusus enim multitudine hominum quam tran quillis in rebus diutius rexit, ex agrestibus habi itudine hominum' },
+    { title: 'Increase Value for Startup', text: 'Abusus enim multitudine hominum quam tran quillis in rebus diutius rexit, ex agrestibus habi itudine hominum' }
+  ]
+
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -75,7 +83,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="spacer" />
+      <div style={{ height: '12rem' }} className="spacer" />
 
       <section className="story-section px-20 mb-10">
         <div className="story-imgs w-1/2 story-imgs-fade relavent">
@@ -87,7 +95,7 @@ export default function Home() {
         <Image className="mobile-desk-img text-fade-in" src={desk} alt="desk" />
 
         <div className="story-text w-1/2 text-fade-in">
-          <h2 className="story-h2 title mb-8">
+          <h2 className="story-h2 title mb-8 text-textDark">
             Join a team where innovation is an expectation
           </h2>
           <h6 className="story-h6 mb-2">
@@ -102,10 +110,10 @@ export default function Home() {
       </section>
 
 
-      <section className="mt-20 pb-20 mb-20 cards-slide-right">
-        <div className="spacer mb-20" />
+      <section className="mt-20 pb-20 cards-slide-right">
+        <div style={{ height: '15rem' }} className="spacer" />
 
-        <h2 className="title text-center mb-20">
+        <h2 className="title text-textDark text-center mb-20">
           Cards are an essential<br />Element of a clear User Interface
         </h2>
         <div className="cards-div flex flex-row gap-5 px-5 md:px-20 ">
@@ -128,6 +136,29 @@ export default function Home() {
         </div>
 
       </section>
+
+      <div style={{ height: '10rem' }} className="spacer" />
+
+      <section className="startup-section bg-primary pt-10 pb-0 px-5 lg:px-20">
+        <h2 className="title text-white">Get started on your startup<br />journey with the right investments</h2>
+
+        <div className="flex flex-row gap-0 mt-20">
+          <h1 className="hidden lg:block flex-none">
+            Nexus Creative
+          </h1>
+          <div className="img-cards grid grid-cols-2 gap-5 grow">
+            {imgCards.map((card, index) => {
+              return (
+                <div key={index}>
+                  <ImageCard title={card.title} text={card.text} />
+                </div>
+              )
+            })}
+          </div>
+        </div>
+
+      </section>
+
     </main>
   );
 }
