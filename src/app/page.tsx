@@ -305,7 +305,7 @@ export default function Home() {
           <h2 className="title text-textDark text-center">
             Join Our Network<br />of Forward-Thinking Investors
           </h2>
-          <div className="flex gap-5 px-20 mt-20">
+          <div className="flex justify-center flex-wrap gap-5 px-0 lg:px-20 mt-20">
             <div className="slide-right">
               <BgImgCard title='Investor Startups'
                 text='Nexus Creative provides exclusive investment forindividuals and institutions looking to diversify their . By our network, you gain access to a curated selection of high-potential startups seeking funding.'
