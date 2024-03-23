@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from 'next/link';
 
 import BorderButton from "./components/borderButton";
 import Button from "./components/button";
@@ -228,10 +229,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="payment-section text-fade-in flex items-center justify-center flex-wrap gap-5 px-2 md:px-20 mt-5 gap-5 lg:gap-20">
+      <section className="payment-section hide-scroll text-fade-in flex items-center justify-start md:justify-center flex-nowrap overflow-x-auto gap-5 px-2 md:px-20 mt-5 md:mt-20 gap-5 lg:gap-20">
+
         {payment_methods.map((item, index) => {
           return (
-            <div key={index}>
+            <div key={index} className="flex-none">
               <Image src={item} alt="payment_method" className="opacity-50 hover:opacity-100" />
             </div>
           )
@@ -243,7 +245,7 @@ export default function Home() {
       <div style={{ height: '4rem' }} className="spacer" />
 
 
-      <section className="investors-section px-0 md:px-20 mt-20 slide-right">
+      <section className="investors-section px-0 md:px-20 mt-5 md:mt-20 slide-right">
         <div className="grid lg:grid-cols-2 mb-10 text-fade-in">
           <h2 className="title text-textDark text-center lg:text-left">
             What our Investors <br /> are saying
@@ -386,7 +388,10 @@ export default function Home() {
               HOME
             </h6>
 
-            <span className="footer-link text-white">Home</span>
+
+
+            <span className="footer-link text-white">
+              Home            </span>
             <span className="footer-link text-white">About</span>
             <span className="footer-link text-white">Blog</span>
             <span className="footer-link text-white">Contact</span>
