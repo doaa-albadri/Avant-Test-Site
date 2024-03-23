@@ -294,6 +294,36 @@ select {
   color: lightgrey;
 }
 
+.footer {
+  margin-top: -60px;
+  z-index: -1;
+  position: relative;
+  padding-top: 9rem;
+}
+
+.mobile-footer {
+  margin-top: -40px;
+  z-index: -1;
+  position: relative;
+  padding-top: 5rem;
+}
+
+.extra-small-text {
+  font-size: 12px;
+  font-family: "Gilroy-Light", sans-serif;
+  line-height: 18px;
+}
+
+.footer-title {
+  font-size: 16px;
+  font-family: "Gilroy-Bold", sans-serif;
+}
+
+.footer-link {
+  font-size: 14px;
+  font-family: "Gilroy-Medium", sans-serif;
+}
+
 @keyframes scale-up-fade-in {
   to {
     scale: 1;

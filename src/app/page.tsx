@@ -7,6 +7,7 @@ import BorderButton from "./components/borderButton";
 import Button from "./components/button";
 import PlainCard from "./components/plainCard";
 import ImageCard from "./components/imgCard";
+import BgImgCard from "./components/bgImgCard";
 
 import header_fg from '../../public/images/header_fg.png'
 import desk from '../../public/images/desk.png'
@@ -18,7 +19,9 @@ import stars from '../../public/images/stars.png'
 import avatar from '../../public/images/avatar.png'
 import arrow_left from '../../public/images/arrow_left.png'
 import arrow_right from '../../public/images/arrow_right.png'
-import BgImgCard from "./components/bgImgCard";
+import full_logo from '../../public/images/full_logo.png'
+import logo from '../../public/images/logo.png'
+import nexus_creative from '../../public/images/nexus_creative.png'
 
 
 
@@ -358,6 +361,71 @@ export default function Home() {
             <Button textColor="text-secondaryLight" label="SEND" bgColor="bg-white" px="px-10" />
           </div>
         </div>
+      </section>
+
+      <footer className="footer hidden md:flex bg-secondary px-5 lg:px-20 justify-start pb-10">
+
+        <div className="flex flex-col gap-2">
+          <Image src={full_logo} alt="logo" />
+
+          <span className="text-white extra-small-text w-1/2">
+            Non ergo erunt homines deliciis diffluentesendi si quando de amicitia, quam nec usu ntioneha rum fidem atque hominu
+          </span>
+
+          <span className="text-white extra-small-text">
+            © 2024 Nexus Creative All rights reserved
+          </span>
+
+
+        </div>
+
+        <div style={{ columnGap: '6rem' }} className="flex">
+
+          <div className="flex flex-col gap-2">
+            <h6 className="footer-title text-white mb-2">
+              HOME
+            </h6>
+
+            <span className="footer-link text-white">Home</span>
+            <span className="footer-link text-white">About</span>
+            <span className="footer-link text-white">Blog</span>
+            <span className="footer-link text-white">Contact</span>
+            <span className="footer-link text-white">FAQ</span>
+
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <h6 className="footer-title text-white mb-2">
+              ABOUT
+            </h6>
+
+            <span className="footer-link text-white">FAQ</span>
+            <span className="footer-link text-white">Terms & conditions</span>
+            <span className="footer-link text-white">Privacy policy</span>
+            <span className="footer-link text-white">Cookies</span>
+
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <h6 className="footer-title text-white mb-2">
+              CONTACT US
+            </h6>
+
+            <span className="footer-link text-white">+5 654 789 321</span>
+            <span className="footer-link text-primary">Nexus@creative.com</span>
+
+          </div>
+
+        </div>
+
+      </footer>
+
+      <section className="mobile-footer bg-secondary flex flex-col gap-5 items-center px-5 pb-10">
+        <Image src={logo} alt="logo" />
+        <Image src={nexus_creative} alt="website-name" />
+        <span className="text-white extra-small-text">
+          © 2024 Nexus Creative All rights reserved
+        </span>
       </section>
     </main>
   );
