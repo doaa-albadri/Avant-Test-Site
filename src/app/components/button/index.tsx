@@ -5,11 +5,12 @@ interface ButtonProps extends HTMLAttributes<HTMLDivElement> {
     bgColor: string;
     label: string;
     id?: string;
+    px?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ textColor, bgColor, label, id, ...props }) => {
+const Button: React.FC<ButtonProps> = ({ textColor, bgColor, label, id, px, ...props }) => {
     return (
-        <button id={id} className={`p-4 rounded-sm ${textColor} ${bgColor}`}>{label}</button>
+        <button id={id} style={{ fontFamily: '"Gilroy-Bold", sans-serif' }} className={`p-4 rounded-sm ${px} ${textColor} ${bgColor}`}>{label}</button>
     )
 }
 

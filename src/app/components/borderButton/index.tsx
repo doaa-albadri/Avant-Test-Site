@@ -6,7 +6,7 @@ interface BorderButtonProps extends HTMLAttributes<HTMLDivElement> {
 
 const BorderButton: React.FC<BorderButtonProps> = ({ label, ...props }) => {
     return (
-        <button className={`p-4 rounded-sm bg-secondary border-2 border-white text-white`}>{label}</button>
+        <button style={{ fontFamily: '"Gilroy-Bold", sans-serif' }} className={`p-4 rounded-sm bg-secondary border-2 border-white text-white`}>{label}</button>
     )
 }
 

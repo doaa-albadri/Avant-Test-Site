@@ -272,6 +272,28 @@ body {
   scale: 1.1;
 }
 
+.contact-title {
+  font-size: 40px;
+  font-family: "Gilroy-Medium", sans-serif;
+}
+
+input,
+select,
+textarea {
+  background: transparent;
+  color: #ffffff;
+  border: solid 0.6px #ffffff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 2px;
+}
+
+select {
+  color: lightgrey;
+}
+
 @keyframes scale-up-fade-in {
   to {
     scale: 1;
@@ -364,6 +386,9 @@ body {
 
 /* mobile */
 @media only screen and (max-width: 450px) {
+  .contact-title {
+    font-size: 30px;
+  }
   .title {
     font-size: 30px;
   }
