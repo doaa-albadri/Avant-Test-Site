@@ -17,10 +17,14 @@ interface BgImgCardProps extends HTMLAttributes<HTMLDivElement> {
 
 const BgImgCard: React.FC<BgImgCardProps> = ({ label, bgImg, btnTextColor, title, text, cardBg, btnBg, textColor, ...props }) => {
     return (
-        <div className={`card-container flex flex-col items-start gap-5 ${cardBg} ${bgImg}`}>
-            <h3 className={textColor}>{title}</h3>
-            <h6 className={`${textColor} mb-2 md:mb-10`}>{text}</h6>
-            <Button bgColor={btnBg} textColor={btnTextColor} label={label} />
+        <div className={`card-container hide-scroll ${cardBg} ${bgImg}`}>
+
+            <div className='glass hide-scroll flex flex-col items-start gap-5'>
+                <h3 className={textColor}>{title}</h3>
+                <h6 className={`${textColor} mb-2 md:mb-10`}>{text}</h6>
+                <Button bgColor={btnBg} textColor={btnTextColor} label={label} />
+            </div>
+
         </div>
     )
 }

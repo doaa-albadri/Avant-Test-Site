@@ -368,7 +368,7 @@ export default function Home() {
             Let’s Get in Touch
           </h3>
 
-          <div className="flex glass flex-col gap-5 md:items-start justify-center w-9/12">
+          <div className="flex flex-col gap-5 md:items-start justify-center w-9/12">
             <div className=" flex flex-wrap md:flex-nowrap gap-5 items-center justify-between w-full">
               <input className="w-full" placeholder="Full Name" />
               <input className="w-full" placeholder="Email Address" />
