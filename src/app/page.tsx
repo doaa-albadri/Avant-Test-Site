@@ -363,13 +363,13 @@ export default function Home() {
       <div id="contact" style={{ height: '4rem' }} className="spacer" />
 
       <section id="mobile-contact" className="contact-section mt-20 lg:mt-0 px-5 lg:px-20">
-        <div className="bg-secondaryLight py-10 flex flex-col gap-5 items-center justify-center">
+        <div className="bg-secondaryLight  py-10 flex flex-col gap-5 items-center justify-center">
           <h3 className="contact-title font-m text-white text-center mb-5">
             Let’s Get in Touch
           </h3>
 
-          <div className="flex flex-col gap-5 md:items-start justify-center w-9/12">
-            <div className="flex flex-wrap md:flex-nowrap gap-5 items-center justify-between w-full">
+          <div className="flex glass flex-col gap-5 md:items-start justify-center w-9/12">
+            <div className=" flex flex-wrap md:flex-nowrap gap-5 items-center justify-between w-full">
               <input className="w-full" placeholder="Full Name" />
               <input className="w-full" placeholder="Email Address" />
             </div>
