@@ -167,6 +167,14 @@ html {
   margin-left: 340px;
 }
 
+.mobile-desk-border {
+  width: 300px;
+  height: 400px;
+  border: 2px solid #010521;
+  position: absolute;
+  border-radius: 2px;
+}
+
 .desk-img {
   position: absolute;
 }
@@ -203,6 +211,7 @@ html {
 
 .mobile-desk-img {
   display: none;
+  z-index: -1;
 }
 
 .story-imgs-fade {
