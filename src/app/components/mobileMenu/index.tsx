@@ -49,26 +49,26 @@ const MobileMenu = () => {
     }, []);
 
     return (
-        <div className='mobile-header w-full flex justify-between items-center p-3'>
-            <div className="mobile-menu  w-full pl-5 flex justify-between items-center">
+        <div className='mobile-header sticky bg-secondary w-full flex justify-between items-center p-3'>
+            <div className="mobile-menu relative text-textDark w-full pl-5 flex justify-between items-center">
                 <button className="burger-menu" onClick={toggleMenu}>
                     <Image id='menu-light' src={burger_menu} alt='menu-button' />
                     <Image style={{ display: 'none' }} id='menu-dark' src={dark_burger_menu} alt='menu-button' />
                 </button>
                 {isOpen && (
-                    <div className="menu-items flex flex-col gap-5 ml-5 w-full">
+                    <div className="menu-items p-3 absolute bg-white flex flex-col gap-5 ml-5 w-full">
                         <ul className="">
                             <li>
-                                <a href="#investors">Investors</a>
+                                <a href="#mobile-investors">Investors</a>
                             </li>
                             <li>
-                                <a href="#ourstory">Our Story</a>
+                                <a href="#mobile-ourstory">Our Story</a>
                             </li>
                             <li>
-                                <a href="#services">Services</a>
+                                <a href="#mobile-services">Services</a>
                             </li>
                             <li>
-                                <a href="#contact">Contact</a>
+                                <a href="#mobile-contact">Contact</a>
                             </li>
                             <li>
                                 <a href="#signin">Investors Sign In</a>

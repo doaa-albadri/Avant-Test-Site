@@ -47,7 +47,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <div style={{ position: 'sticky', top: '0', zIndex: '1' }} className="navbar pt-5">
+        <div style={{ position: 'sticky', top: '0', zIndex: '1' }} className="navbar text-white bg-secondary font-l pt-5">
             <nav
                 className="flex items-center justify-between px-20">
                 <a href='#home'>
