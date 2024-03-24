@@ -209,8 +209,11 @@ html {
   font-family: "Gilroy-Bold", sans-serif;
 }
 
-.mobile-desk-img {
+.mobile-desk {
   display: none;
+}
+
+.mobile-desk-img {
   z-index: -1;
 }
 
@@ -476,7 +479,7 @@ select {
   .h6-text {
     text-align: center;
   }
-  .mobile-desk-img {
+  .mobile-desk {
     display: block;
   }
 }

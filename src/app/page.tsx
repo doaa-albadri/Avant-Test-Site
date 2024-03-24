@@ -125,9 +125,9 @@ export default function Home() {
           <div className="big-border"></div>
           <div className="small-border"></div>
         </div>
-        <div className="relavent pr-5 story-imgs-fade">
+        <div className="mobile-desk relavent pr-5 story-imgs-fade">
           <div className="mobile-desk-border"></div>
-          <Image className="mobile-desk-img  mt-5 ml-5 relative" src={desk} alt="desk" />
+          <Image className="mobile-desk-img mt-5 ml-5 relative" src={desk} alt="desk" />
         </div>
 
         <div className="story-text w-1/2 text-fade-in">
