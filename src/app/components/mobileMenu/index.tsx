@@ -1,7 +1,8 @@
 "use client"
 
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
+
+import Image from 'next/image';
 
 import burger_menu from '../../../../public/images/burger_menu.png'
 import dark_burger_menu from '../../../../public/images/burger_menu_dark.png'
@@ -9,19 +10,19 @@ import logo from '../../../../public/images/logo.png'
 import colored_logo from '../../../../public/images/colored_logo.png'
 
 const MobileMenu = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState<boolean>(false);
 
-    const toggleMenu = () => {
+    const toggleMenu: () => void = () => {
         setIsOpen(!isOpen);
     };
 
     useEffect(() => {
         const handleScroll = () => {
-            const menu_header: any = document.querySelector('.mobile-header');
-            const logo: any = document.getElementById('mobile-logo');
-            const colored_logo: any = document.getElementById('mobile-colored-logo');
-            const light_menu: any = document.getElementById('menu-light');
-            const dark_menu: any = document.getElementById('menu-dark');
+            const menu_header: HTMLElement | null = document.querySelector('.mobile-header') as HTMLElement;
+            const logo: HTMLElement | null = document.getElementById('mobile-logo') as HTMLElement;
+            const colored_logo: HTMLElement | null = document.getElementById('mobile-colored-logo') as HTMLElement;
+            const light_menu: HTMLElement | null = document.getElementById('menu-light') as HTMLElement;
+            const dark_menu: HTMLElement | null = document.getElementById('menu-dark') as HTMLElement;
 
             if (window.scrollY > 491) {
                 menu_header.style.backgroundColor = '#ffffff';

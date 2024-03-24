@@ -1,5 +1,7 @@
 import React, { HTMLAttributes } from 'react'
+
 import './styles.css'
+
 import Button from '../button'
 
 interface PlainCardProps extends HTMLAttributes<HTMLDivElement> {

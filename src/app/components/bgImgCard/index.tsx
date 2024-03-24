@@ -1,5 +1,7 @@
 import React, { HTMLAttributes } from 'react'
+
 import './styles.css'
+
 import Button from '../button'
 
 interface BgImgCardProps extends HTMLAttributes<HTMLDivElement> {
@@ -12,6 +14,7 @@ interface BgImgCardProps extends HTMLAttributes<HTMLDivElement> {
     btnTextColor: string;
     bgImg?: string;
 }
+
 const BgImgCard: React.FC<BgImgCardProps> = ({ label, bgImg, btnTextColor, title, text, cardBg, btnBg, textColor, ...props }) => {
     return (
         <div className={`card-container flex flex-col items-start gap-5 ${cardBg} ${bgImg}`}>

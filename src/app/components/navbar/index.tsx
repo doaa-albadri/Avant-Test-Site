@@ -10,11 +10,11 @@ import colored_logo from '../../../../public/images/colored_logo.png'
 export default function Navbar() {
     useEffect(() => {
         const handleScroll = () => {
-            const navbar: any = document.querySelector('.navbar');
-            const showWhiteBgButton: any = document.getElementById('show-white-bg');
-            const showPrimaryBgButton: any = document.getElementById('show-primary-bg');
-            const logo: any = document.getElementById('logo');
-            const colored_logo: any = document.getElementById('colored_logo');
+            const navbar: HTMLElement | null = document.querySelector('.navbar') as HTMLElement;
+            const showWhiteBgButton: HTMLElement | null = document.getElementById('show-white-bg') as HTMLElement;
+            const showPrimaryBgButton: HTMLElement | null = document.getElementById('show-primary-bg') as HTMLElement;
+            const logo: HTMLElement | null = document.getElementById('logo') as HTMLElement;
+            const colored_logo: HTMLElement | null = document.getElementById('colored_logo') as HTMLElement;
 
             if (window.scrollY > 900) {
                 navbar.classList.add('scrolled-past-900');

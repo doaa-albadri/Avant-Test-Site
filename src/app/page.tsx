@@ -1,8 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
-import Link from 'next/link';
+import Image, { StaticImageData } from "next/image";
 
 import BorderButton from "./components/borderButton";
 import Button from "./components/button";
@@ -24,13 +23,26 @@ import full_logo from '../../public/images/full_logo.png'
 import logo from '../../public/images/logo.png'
 import nexus_creative from '../../public/images/nexus_creative.png'
 
+interface Card {
+  cardBorder: string;
+  title: string;
+  text: string;
+  cardBg: string;
+  textColor: string;
+  btnBg: string;
+  btnTextColor: string;
+  label: string;
+}
 
-
+interface ImgCard {
+  title: string;
+  text: string;
+}
 
 export default function Home() {
-  const [scrollY, setScrollY] = useState(0);
+  const [scrollY, setScrollY] = useState<number>(0);
 
-  const cards = [
+  const cards: Card[] = [
     {
       cardBorder: "",
       title: "The First Card",
@@ -63,14 +75,14 @@ export default function Home() {
     }
   ]
 
-  const imgCards = [
+  const imgCards: ImgCard[] = [
     { title: 'Increase Value for Startup', text: 'Abusus enim multitudine hominum quam tran quillis in rebus diutius rexit, ex agrestibus habi itudine hominum' },
     { title: 'Increase Value for Startup', text: 'Abusus enim multitudine hominum quam tran quillis in rebus diutius rexit, ex agrestibus habi itudine hominum' },
     { title: 'Increase Value for Startup', text: 'Abusus enim multitudine hominum quam tran quillis in rebus diutius rexit, ex agrestibus habi itudine hominum' },
     { title: 'Increase Value for Startup', text: 'Abusus enim multitudine hominum quam tran quillis in rebus diutius rexit, ex agrestibus habi itudine hominum' }
   ]
 
-  const stats = [
+  const stats: string[] = [
     '10K',
     '5K',
     '10K',
@@ -78,7 +90,7 @@ export default function Home() {
 
   ]
 
-  const payment_methods = [
+  const payment_methods: StaticImageData[] = [
     stripe,
     paypal,
     stripe,
@@ -89,7 +101,7 @@ export default function Home() {
 
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll: () => void = () => {
       setScrollY(window.scrollY);
     };
 
@@ -99,6 +111,7 @@ export default function Home() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   return (
     <main>
       <section id="home" className="welcome-section-wrapper">

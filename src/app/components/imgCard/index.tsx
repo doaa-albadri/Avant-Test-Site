@@ -1,7 +1,9 @@
-import Image from 'next/image';
 import React, { HTMLAttributes } from 'react'
 
+import Image from 'next/image';
+
 import './styles.css'
+
 import card_img from '../../../../public/images/card_img.png'
 
 interface ImageCardProps extends HTMLAttributes<HTMLDivElement> {
