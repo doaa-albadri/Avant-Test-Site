@@ -317,6 +317,7 @@ select {
 @keyframes scale-up-fade-in {
   to {
     scale: 1;
+    -webkit-scale: 1;
     opacity: 1;
   }
 }
@@ -331,10 +332,12 @@ select {
   0% {
     opacity: 0;
     transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
   }
   100% {
     opacity: 1;
     transform: translateX(0);
+    -webkit-transform: translateX(0);
   }
 }
 
@@ -342,10 +345,12 @@ select {
   0% {
     opacity: 0;
     transform: translateX(100%);
+    -webkit-transform: translateX(100%);
   }
   100% {
     opacity: 1;
     transform: translateX(0);
+    -webkit-transform: translateX(0);
   }
 }
 
